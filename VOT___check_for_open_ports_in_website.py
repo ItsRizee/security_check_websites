@@ -1,10 +1,12 @@
 
 import socket
 
-website = "https://www.google.com/"
-ports = [80, 443]
+input_website = "https://www.google.com/"
+website=input_website[8:]
+website=website[:-1]
 
-for port in ports:
+
+for port in range(10):
     try:
         # Create a socket object
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
