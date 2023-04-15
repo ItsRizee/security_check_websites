@@ -6,7 +6,7 @@ def check_ports(website):
     website = website[:-1]
     open_ports = []
 
-    for port in range(450):
+    for port in range(1024):
         try:
             # Create a socket object
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
