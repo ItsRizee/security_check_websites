@@ -1,0 +1,11 @@
+import requests
+
+def checkEncryption(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        if response.url.startswith("https://"):
+            print("The access is encrypted")
+        else:
+            print("The access is unencrypted")
+    else:
+        print("Couldn't access the website.")
